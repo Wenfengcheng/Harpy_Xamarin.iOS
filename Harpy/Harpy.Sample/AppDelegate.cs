@@ -22,6 +22,15 @@ namespace Harpy.Sample
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
 
+            this.Window.MakeKeyAndVisible();
+
+            Harpy.SharedInstance.PresentingViewController = this.Window.RootViewController;
+            Harpy.SharedInstance.WeakDelegate = this;
+            Harpy.SharedInstance.AlertType = HarpyAlertType.Skip;
+            Harpy.SharedInstance.DebugEnabled = true;
+            Harpy.SharedInstance.ForceLanguageLocalization = Constants.HarpyLanguageChineseSimplified;
+            Harpy.SharedInstance.CheckVersion();
+
             return true;
         }
 

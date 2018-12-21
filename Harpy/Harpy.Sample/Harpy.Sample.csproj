@@ -89,6 +89,10 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage-1125x2436%403x.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage-750x1334%402x.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage-1242x2208%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
