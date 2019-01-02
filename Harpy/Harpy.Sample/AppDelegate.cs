@@ -26,11 +26,20 @@ namespace Harpy.Sample
 
             Harpy.SharedInstance.PresentingViewController = this.Window.RootViewController;
             Harpy.SharedInstance.WeakDelegate = this;
-            //Harpy.SharedInstance.AlertType = HarpyAlertType.Skip;
-            Harpy.SharedInstance.PatchUpdateAlertType = HarpyAlertType.Option;
-            Harpy.SharedInstance.MinorUpdateAlertType = HarpyAlertType.Skip;
-            Harpy.SharedInstance.MajorUpdateAlertType = HarpyAlertType.Force;
-            Harpy.SharedInstance.RevisionUpdateAlertType = HarpyAlertType.Option;
+
+            Harpy.SharedInstance.AlertType = HarpyAlertType.Skip;
+
+            /*
+            If you would like to set a different type of alert for revision, patch, minor, 
+            and/or major updates, simply add one or all of the following optional lines to your 
+            setup before calling any of the checkVersion methods
+            */
+
+            //Harpy.SharedInstance.PatchUpdateAlertType = HarpyAlertType.Option;
+            //Harpy.SharedInstance.MinorUpdateAlertType = HarpyAlertType.Skip;
+            //Harpy.SharedInstance.MajorUpdateAlertType = HarpyAlertType.Force;
+            //Harpy.SharedInstance.RevisionUpdateAlertType = HarpyAlertType.Option;
+
             Harpy.SharedInstance.DebugEnabled = true;
             Harpy.SharedInstance.CountryCode = "CN";
             Harpy.SharedInstance.ForceLanguageLocalization = Constants.HarpyLanguageChineseSimplified;
