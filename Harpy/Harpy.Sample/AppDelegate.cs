@@ -26,44 +26,41 @@ namespace Harpy.Sample
 
             Harpy.SharedInstance.PresentingViewController = this.Window.RootViewController;
             Harpy.SharedInstance.WeakDelegate = this;
-            Harpy.SharedInstance.AlertType = HarpyAlertType.Skip;
+            //Harpy.SharedInstance.AlertType = HarpyAlertType.Skip;
+            Harpy.SharedInstance.PatchUpdateAlertType = HarpyAlertType.Option;
+            Harpy.SharedInstance.MinorUpdateAlertType = HarpyAlertType.Skip;
+            Harpy.SharedInstance.MajorUpdateAlertType = HarpyAlertType.Force;
+            Harpy.SharedInstance.RevisionUpdateAlertType = HarpyAlertType.Option;
             Harpy.SharedInstance.DebugEnabled = true;
+            Harpy.SharedInstance.CountryCode = "CN";
             Harpy.SharedInstance.ForceLanguageLocalization = Constants.HarpyLanguageChineseSimplified;
+
             Harpy.SharedInstance.CheckVersion();
-
             return true;
-        }
-
-        public override void OnResignActivation(UIApplication application)
-        {
-            // Invoked when the application is about to move from active to inactive state.
-            // This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) 
-            // or when the user quits the application and it begins the transition to the background state.
-            // Games should use this method to pause the game.
-        }
-
-        public override void DidEnterBackground(UIApplication application)
-        {
-            // Use this method to release shared resources, save user data, invalidate timers and store the application state.
-            // If your application supports background exection this method is called instead of WillTerminate when the user quits.
-        }
-
-        public override void WillEnterForeground(UIApplication application)
-        {
-            // Called as part of the transiton from background to active state.
-            // Here you can undo many of the changes made on entering the background.
         }
 
         public override void OnActivated(UIApplication application)
         {
-            // Restart any tasks that were paused (or not yet started) while the application was inactive. 
-            // If the application was previously in the background, optionally refresh the user interface.
+
+            /*
+             Perform daily check for new version of your app
+             Useful if user returns to you app from background after extended period of time
+             Place in applicationDidBecomeActive:
+
+             Also, performs version check on first launch.
+            */
+            //Harpy.SharedInstance.CheckVersionDaily();
+
+            /*
+             Perform weekly check for new version of your app
+             Useful if you user returns to your app from background after extended period of time
+             Place in applicationDidBecomeActive:
+
+             Also, performs version check on first launch.
+            */
+            //Harpy.SharedInstance.CheckVersionWeekly();
         }
 
-        public override void WillTerminate(UIApplication application)
-        {
-            // Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
-        }
     }
 }
 
