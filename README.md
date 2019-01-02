@@ -1,8 +1,13 @@
 # Harpy_Xamarin.iOS
+
+[![Version Status](https://img.shields.io/cocoapods/v/Harpy.svg?style=flat)](http://cocoadocs.org/docsets/Harpy)
+
 ### Notify users when a new version of your app is available and prompt them to upgrade.
 
 Port of Xamarin iOS of the [Harpy](https://github.com/ArtSabintsev/Harpy)
 
+## NuGet
+* [Xamarin.iOS.Harpy](https://www.nuget.org/packages/Xamarin.iOS.Harpy) [![NuGet](https://img.shields.io/nuget/v/Xamarin.iOS.Harpy.svg?label=NuGet)](https://www.nuget.org/packages/Xamarin.iOS.Harpy)
 
 ## About
 **Harpy** checks a user's currently installed version of your iOS app against the version that is currently available in the App Store. If a new version is available, an alert can be presented to the user informing them of the newer version, and giving them the option to update the application.
