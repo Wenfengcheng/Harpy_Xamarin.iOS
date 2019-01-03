@@ -12,13 +12,13 @@
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>Xamarin.iOS.Harpy</PackageId>
-    <PackageVersion>4.1.14</PackageVersion>
+    <PackageVersion>4.1.15</PackageVersion>
     <Authors>WenfengCheng</Authors>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <Owners>WenfengCheng, Funky_Xamarin</Owners>
     <PackageProjectUrl>https://github.com/Wenfengcheng/Harpy_Xamarin.iOS</PackageProjectUrl>
-    <PackageReleaseNotes>Release Harpy_Xamarin.iOS 4.1.14</PackageReleaseNotes>
+    <PackageReleaseNotes>Remove unnecessary architecture and release new nuget</PackageReleaseNotes>
     <Summary>Xamarin.iOS Binding Library - Harpy</Summary>
     <PackageTags>Xamarin.iOS,  Xamarin, Update, AppStore, Alert</PackageTags>
     <Title>Funky - Harpy</Title>
