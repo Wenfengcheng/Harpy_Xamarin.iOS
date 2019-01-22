@@ -8,7 +8,7 @@ using CoreGraphics;
 namespace Harpy
 {
     [Static]
-    partial interface Constants
+    partial interface HarpyConstants
     {
         // extern double HarpyVersionNumber;
         [Field("HarpyVersionNumber", "__Internal")]
@@ -187,6 +187,11 @@ namespace Harpy
         NSString HarpyLanguageVietnamese { get; }
     }
 
+    partial interface IHarpyDelegate
+    {
+
+    }
+
     // @protocol HarpyDelegate <NSObject>
     [Protocol, Model]
     [BaseType(typeof(NSObject))]
@@ -218,7 +223,7 @@ namespace Harpy
     interface Harpy
     {
         [Wrap("WeakDelegate")]
-        HarpyDelegate Delegate { get; set; }
+        IHarpyDelegate Delegate { get; set; }
 
         // @property (nonatomic, weak) id<HarpyDelegate> delegate;
         [NullAllowed, Export("delegate", ArgumentSemantic.Weak)]
